@@ -1,0 +1,32 @@
+version: "3.9"
+
+services:
+  pipeline:
+    build: .
+    env_file: .env
+    volumes:
+      - .:/app
+    working_dir: /app
+    depends_on:
+      - ollama
+    command: python -m orchestration.flows.daily_pipeline
+
+  ollama:
+    image: ollama/ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+
+  jupyter:
+    build: .
+    env_file: .env
+    volumes:
+      - .:/app
+    working_dir: /app
+    ports:
+      - "8888:8888"
+    command: jupyter notebook --ip=0.0.0.0 --no-browser --allow-root --NotebookApp.token=''
+
+volumes:
+  ollama_data:

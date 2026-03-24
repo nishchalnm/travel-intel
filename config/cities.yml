@@ -1,0 +1,40 @@
+cities:
+  new_york:
+    display_name: "New York City"
+    country: "US"
+    lat: 40.7128
+    lon: -74.0060
+    teleport_slug: "new-york-city"
+    timezone: "America/New_York"
+
+  london:
+    display_name: "London"
+    country: "GB"
+    lat: 51.5074
+    lon: -0.1278
+    teleport_slug: "london"
+    timezone: "Europe/London"
+
+  tokyo:
+    display_name: "Tokyo"
+    country: "JP"
+    lat: 35.6762
+    lon: 139.6503
+    teleport_slug: "tokyo"
+    timezone: "Asia/Tokyo"
+
+  barcelona:
+    display_name: "Barcelona"
+    country: "ES"
+    lat: 41.3851
+    lon: 2.1734
+    teleport_slug: "barcelona"
+    timezone: "Europe/Madrid"
+
+  bangkok:
+    display_name: "Bangkok"
+    country: "TH"
+    lat: 13.7563
+    lon: 100.5018
+    teleport_slug: "bangkok"
+    timezone: "Asia/Bangkok"
