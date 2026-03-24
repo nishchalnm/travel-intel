@@ -1,0 +1,16 @@
+README.md
+setup.py
+ingestion/__init__.py
+ingestion/loaders/__init__.py
+ingestion/loaders/motherduck.py
+ingestion/models/__init__.py
+ingestion/sources/__init__.py
+ingestion/sources/base.py
+ingestion/sources/gnews.py
+ingestion/sources/openmeteo.py
+ingestion/sources/opentripmap.py
+ingestion/sources/teleport.py
+travel_intel.egg-info/PKG-INFO
+travel_intel.egg-info/SOURCES.txt
+travel_intel.egg-info/dependency_links.txt
+travel_intel.egg-info/top_level.txt
