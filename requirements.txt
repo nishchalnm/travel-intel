@@ -1,5 +1,5 @@
 # data
-duckdb==0.10.0
+duckdb==1.5.1
 motherduck
 pandas==2.2.0
 pydantic==2.7.0
