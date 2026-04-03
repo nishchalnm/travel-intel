@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: gold_city_intelligence
+    description: "One row per city — fully denormalized for LLM consumption"
+    columns:
+      - name: city_slug
+        tests:
+          - not_null
+          - unique
+      - name: display_name
+        tests:
+          - not_null
+      - name: avg_temp_max_c
+        tests:
+          - not_null
+      - name: top_pois
+        tests:
+          - not_null
+      - name: headlines_concat
+        tests:
+          - not_null
+      - name: country_name
+        tests:
+          - not_null
+      - name: primary_timezone
+        tests:
+          - not_null

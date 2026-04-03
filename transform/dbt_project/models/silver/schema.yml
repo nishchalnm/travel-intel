@@ -1,0 +1,63 @@
+version: 2
+
+models:
+  - name: silver_weather
+    description: "Weekly weather summary per city, aggregated from 7-day bronze forecast"
+    columns:
+      - name: city_slug
+        tests:
+          - not_null
+          - unique
+      - name: avg_temp_max_c
+        tests:
+          - not_null
+      - name: rainy_days
+        tests:
+          - not_null
+      - name: forecast_start
+        tests:
+          - not_null
+
+  - name: silver_pois
+    description: "Top 5 POIs per city ranked by rating"
+    columns:
+      - name: city_slug
+        tests:
+          - not_null
+      - name: rank
+        tests:
+          - not_null
+      - name: poi_name
+        tests:
+          - not_null
+      - name: rating
+        tests:
+          - not_null
+
+  - name: silver_news
+    description: "Deduplicated news per city with sentiment counts and headline concat"
+    columns:
+      - name: city_slug
+        tests:
+          - not_null
+          - unique
+      - name: article_count
+        tests:
+          - not_null
+      - name: headlines_concat
+        tests:
+          - not_null
+
+  - name: silver_country_info
+    description: "Clean country metadata with city-level timezone"
+    columns:
+      - name: city_slug
+        tests:
+          - not_null
+          - unique
+      - name: country_name
+        tests:
+          - not_null
+      - name: primary_timezone
+        tests:
+          - not_null
