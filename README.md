@@ -130,7 +130,7 @@ no hallucination of facts not present in the gold table.
 
 ### Setup
 ```bash
-git clone https://github.com/yourusername/travel-intel
+git clone https://github.com/nishchalnm/travel-intel
 cd travel-intel
 python -m venv .venv
 source .venv/bin/activate
